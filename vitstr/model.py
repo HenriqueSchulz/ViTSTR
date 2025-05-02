@@ -13,8 +13,9 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
 """
-from typing import Union
+
 from argparse import Namespace
+from typing import Union
 
 import torch
 import torch.nn as nn
@@ -22,9 +23,9 @@ import torch.nn.functional as F
 import torchvision.transforms as transforms
 from PIL import Image
 
+from vitstr.config import ModelConfig
 from vitstr.modules.transformation import TPS_SpatialTransformerNetwork
 from vitstr.modules.vitstr import create_vitstr
-from vitstr.config import ModelConfig
 
 
 class TokenLabelConverter(object):
@@ -66,7 +67,7 @@ class TokenLabelConverter(object):
             j = 0
             while j < len(txt):
                 k = len(txt)
-                while j < k and not "".join(txt[j:k]) in self.dict:
+                while j < k and "".join(txt[j:k]) not in self.dict:
                     k -= 1
 
                 if "".join(txt[j:k]) in self.dict:
@@ -167,7 +168,7 @@ class ViTSTR(nn.Module):
                 confidence_score = 0
             else:
                 confidence_score = pred_max_prob.cumprod(dim=0)[-1]
-            
+
         return pred.upper(), confidence_score
 
     @classmethod
@@ -177,8 +178,11 @@ class ViTSTR(nn.Module):
         opt: Union[ModelConfig, Namespace] = ModelConfig(),
         device: torch.device = torch.device("cpu"),
     ):
+        print(opt)
         model = cls(opt)
-        model.load_state_dict(torch.load(path, map_location=device)["state_dict"])
+        model.load_state_dict(
+            torch.load(path, map_location=device, weights_only=True)["state_dict"]
+        )
         model.to(device).eval()
 
         # warm-up

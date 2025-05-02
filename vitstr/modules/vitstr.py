@@ -8,20 +8,15 @@ TODO:
 Copyright 2021 Rowel Atienza
 """
 
-from __future__ import absolute_import
-from __future__ import division
-from __future__ import print_function
+from __future__ import absolute_import, division, print_function
+
+import logging
 
 import torch
 import torch.nn as nn
-import logging
 import torch.utils.model_zoo as model_zoo
-
-from copy import deepcopy
-from functools import partial
+from timm.models import create_model, register_model
 from timm.models.vision_transformer import VisionTransformer, _cfg
-from timm.models.registry import register_model
-from timm.models import create_model
 
 _logger = logging.getLogger(__name__)
 
@@ -58,6 +53,7 @@ class ViTSTR(VisionTransformer):
     def __init__(self, *args, **kwargs):
         del kwargs["pretrained_cfg"]
         del kwargs["pretrained_cfg_overlay"]
+        del kwargs["cache_dir"]
         super().__init__(*args, **kwargs)
 
     def reset_classifier(self, num_classes):
