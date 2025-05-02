@@ -178,10 +178,9 @@ class ViTSTR(nn.Module):
         opt: Union[ModelConfig, Namespace] = ModelConfig(),
         device: torch.device = torch.device("cpu"),
     ):
-        print(opt)
         model = cls(opt)
         model.load_state_dict(
-            torch.load(path, map_location=device, weights_only=True)["state_dict"]
+            torch.load(path, map_location=device, weights_only=False)["state_dict"]
         )
         model.to(device).eval()
 
