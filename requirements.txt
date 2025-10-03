@@ -1,0 +1,25 @@
+# requirements.txt
+
+# Modelo
+timm==0.5.4
+torch==1.13.1
+torchvision==0.14.1
+torchaudio==0.13.1
+
+# Utilidades
+fire
+validators
+lmdb
+pillow
+natsort
+tqdm
+
+# Manipulação de imagens
+wand
+opencv-python
+nltk
+six
+augmentation
+
+# Manipulação de imagens avançada
+scikit-image

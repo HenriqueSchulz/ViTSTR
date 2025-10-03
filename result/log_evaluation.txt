@@ -1,0 +1,24 @@
+dataset_root:    C:\Users\quiqu\Desktop\ViTSTR\dataset_files\testA\test_a_lmdb	 dataset: /
+sub-directory:	/.	 num samples: 3000
+53.967
+dataset_root:    C:\Users\quiqu\Desktop\ViTSTR\dataset_files\testA\test_a_lmdb	 dataset: /
+sub-directory:	/.	 num samples: 3000
+53.967
+dataset_root:    C:\Users\quiqu\Desktop\ViTSTR\dataset_files\testA\test_a_lmdb	 dataset: /
+sub-directory:	/.	 num samples: 3000
+53.967
+dataset_root:    C:\Users\quiqu\Desktop\ViTSTR\dataset_files\testA\test_a_lmdb	 dataset: /
+sub-directory:	/.	 num samples: 3000
+53.967
+dataset_root:    C:\Users\quiqu\Desktop\ViTSTR\dataset_files\testA\test_a_lmdb	 dataset: /
+sub-directory:	/.	 num samples: 3000
+53.967
+dataset_root:    C:\Users\quiqu\Desktop\ViTSTR\dataset_files\testA\test_a_lmdb	 dataset: /
+sub-directory:	/.	 num samples: 3000
+53.967
+dataset_root:    C:\Users\quiqu\Desktop\ViTSTR\dataset_files\testA\test_a_lmdb	 dataset: /
+sub-directory:	/.	 num samples: 3000
+53.967
+dataset_root:    C:\Users\quiqu\Desktop\ViTSTR\dataset_files\testA\test_a_lmdb	 dataset: /
+sub-directory:	/.	 num samples: 3000
+60.567
