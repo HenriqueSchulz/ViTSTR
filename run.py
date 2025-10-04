@@ -65,7 +65,7 @@ def main():
         "--data_filtering_off",
         "--imgH", "224",
         "--imgW", "224",
-        "--saved_model", os.path.join(project_path, "saved_models", "vitstr_base_patch16_224_aug.pth")
+        "--saved_model", os.path.join(project_path, "saved_models", "vitstr_tiny_patch16_224_aug.pth")
     ]
 
     # Test.py espera sys.argv
