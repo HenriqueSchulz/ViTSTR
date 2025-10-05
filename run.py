@@ -10,7 +10,7 @@ def main():
     project_path = os.path.abspath(os.path.dirname(__file__))
 
     # Dataset
-    dataset_folder = os.path.join(project_path, "dataset_files", "testA")
+    dataset_folder = os.path.join(project_path, "WordArt-V1.5", "testA")
     labels_file = os.path.join(dataset_folder, "labels.txt")
     lmdb_output = os.path.join(dataset_folder, "test_a_lmdb")
     
