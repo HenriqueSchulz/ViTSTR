@@ -60,7 +60,7 @@ def main():
         "--SequenceModeling", "None",
         "--Prediction", "None",
         "--Transformer",
-        "--TransformerModel", "vitstr_base_patch16_224",
+        "--TransformerModel", "vitstr_tiny_patch16_224",
         "--sensitive",
         "--data_filtering_off",
         "--imgH", "224",
