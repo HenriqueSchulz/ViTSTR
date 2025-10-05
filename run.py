@@ -39,7 +39,7 @@ def main():
     if not os.path.exists(lmdb_output):
         print(f"📦 Criando LMDB em: {lmdb_output}")
         createDataset(
-            inputPath=os.path.join(dataset_folder, "images"),
+            inputPath=os.path.join(dataset_folder, ""),
             gtFile=labels_file,
             outputPath=lmdb_output
         )
